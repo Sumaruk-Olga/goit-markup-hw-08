@@ -1,6 +1,5 @@
-.header {
-  display: block;
-  
+.header { 
+  display: block;  
   z-index: 9;
   width: 100%;
   background-color: var(--white-color);
@@ -9,11 +8,12 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   border-bottom: 1px solid var(--header-border); 
+  
 }
 
-.header__container {  
- 
-  // align-items: center;  
+.header__container {   
+  position: relative;
+  align-items: center;  
   @media screen and (min-width: 320px) {
     max-width: 479px;
     display: flex;
@@ -34,18 +34,26 @@
 }
 
 .mobile-menu {
-  display: block;   
-  @media screen and (max-width: 479px) {
-   display: none;   
-  }
-}
+   display: none;
+   
+        &.is-open{
+      display: block; 
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100vw;
+      height: 100vw;
+      background-color: var(--white-color);
+    }
+   }
+  
 
 .modal-menu__social-list{
-  display: none;
-  @media screen and (max-width: 479px) {
-    display: block;   
+   
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
    }
-}
 
 .modal-menu__social-link{
  font-weight: 500;
@@ -69,7 +77,14 @@ color:var(--accent-color);
     &.is-open .modal-menu__button--close{
       display: block;
     }
+
+    @media screen and (min-width: 480px) {
+      display: none;
+    }
+   
 }
+
+
 
 .modal-menu__button--close{
   display: none;
@@ -78,7 +93,10 @@ color:var(--accent-color);
 //logo is in   components/_logo.scss
 
 .nav-list {
-    display: flex;
+    
+    @media screen and (min-width: 480px) {
+      display: flex;
+    }
   }
   
   .nav-list__item:not(:last-child) {
@@ -101,9 +119,14 @@ color:var(--accent-color);
 
   .nav-list__link--current {
     color: var(--accent-color);
-    position: relative;
+    @media screen and (min-width: 480px) {
+      position: relative;
+    }
+    
+    
   }
 
+@media screen and (min-width: 480px) {
   .nav-list__link--current::after {
     position: absolute;
     content: '';
@@ -115,6 +138,8 @@ color:var(--accent-color);
     bottom: 0;
     border-radius: 2px;
   }
+}
+  
 
 .auth-nav{
     display: flex;
