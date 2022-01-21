@@ -1,0 +1,102 @@
+.header {
+  display: block;
+  
+  z-index: 9;
+  width: 100%;
+  background-color: var(--white-color);
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--header-border);
+}
+
+.header__container{
+  display: flex;
+  align-items: center;    
+  // position: fixed;
+}
+
+//logo is in   components/_logo.scss
+
+.nav-list {
+    display: flex;
+  }
+  
+  .nav-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .nav-list__link{
+    text-decoration: none;
+    color: var(--title-color);
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+      &:hover,
+      &:focus{
+      color: var(--accent-color);
+      }
+  }
+
+  .nav-list__link--current {
+    color: var(--accent-color);
+    position: relative;
+  }
+
+  .nav-list__link--current::after {
+    position: absolute;
+    content: '';
+    background-color: var(--accent-color);
+    display: block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    border-radius: 2px;
+  }
+
+.auth-nav{
+    display: flex;
+    margin-left: auto;
+        &:not(:last-child) {        
+            margin-right: 50px;
+        }
+}
+
+.auth-nav__item:not(:last-child){
+margin-right: 30px;
+}
+
+.auth-nav__link {
+    display: block;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);            
+          }
+}
+
+.auth-nav__link--letter,
+.auth-nav__link--tel{
+    fill: var(--text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 10px;
+}
+
+.auth-nav__link:hover .auth-nav__link--letter,
+.auth-nav__link:focus .auth-nav__link--letter,
+.auth-nav__link:hover .auth-nav__link--tel,
+.auth-nav__link:focus .auth-nav__link--tel {
+  fill: var(--accent-color);
+}
