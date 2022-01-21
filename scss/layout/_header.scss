@@ -8,13 +8,71 @@
   line-height: 1.14;
   font-weight: 500;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid var(--header-border);
+  border-bottom: 1px solid var(--header-border); 
 }
 
-.header__container{
-  display: flex;
-  align-items: center;    
-  // position: fixed;
+.header__container {  
+ 
+  // align-items: center;  
+  @media screen and (min-width: 320px) {
+    max-width: 479px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+        
+  }
+  @media screen and (min-width: 480px){
+    background-color: yellowgreen;
+  }
+  @media screen and (min-width: 768px) {
+    background-color: violet;
+  }
+  @media screen and (min-width: 1200px){
+    background-color: blue;
+  }
+}
+
+.mobile-menu {
+  display: block;   
+  @media screen and (max-width: 479px) {
+   display: none;   
+  }
+}
+
+.modal-menu__social-list{
+  display: none;
+  @media screen and (max-width: 479px) {
+    display: block;   
+   }
+}
+
+.modal-menu__social-link{
+ font-weight: 500;
+font-size: 18px;
+line-height: 1.22;
+letter-spacing: 0.02em;
+color:var(--accent-color);
+
+}
+
+.modal-menu__button{
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+    &.is-open .modal-menu__button--open{
+      display: none;
+    }
+    &.is-open .modal-menu__button--close{
+      display: block;
+    }
+}
+
+.modal-menu__button--close{
+  display: none;
 }
 
 //logo is in   components/_logo.scss

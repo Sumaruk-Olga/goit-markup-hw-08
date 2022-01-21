@@ -27,6 +27,7 @@
         <a class="logo" href="https://info@devstudio.com"
           >Web<span class="logo__text">Studio</span></a
         >
+        <div class="mobile-menu">
         <nav>
           <ul class="nav-list">
             <li class="list nav-list__item">
@@ -56,6 +57,25 @@
             >
           </li>
         </ul>
+
+        <ul class="modal-menu__social-list">
+          <li class="list"><a class="modal-menu__social-link">Instagram</a></li>
+          <li class="list"><a class="modal-menu__social-link">Twitter</a></li>
+          <li class="list"><a class="modal-menu__social-link">Facebook</a></li>
+          <li class="list"><a class="modal-menu__social-link">LinkedIn</a></li>
+        </ul>
+
+        
+      </div>
+      <button type="button" class="modal-menu__button" data-menu-button>
+        <svg 
+        width="40" 
+        height="40"
+        aria-label="переключатель мобильного меню">
+        <use class="modal-menu__button--close" href="./images/symbol-defs.svg#icon-close-black"></use>
+        <use class="modal-menu__button--open" href="./images/symbol-defs.svg#icon-close-black"></use>
+        </svg>
+      </button>
       </div>
     </header>
     <main>
@@ -522,5 +542,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
