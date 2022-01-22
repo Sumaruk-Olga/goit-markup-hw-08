@@ -1,4 +1,5 @@
 .header { 
+  position: relative;
   display: block;  
   z-index: 9;
   width: 100%;
@@ -12,7 +13,7 @@
 }
 
 .header__container {   
-  position: relative;
+  // position: relative;
   align-items: center;  
   @media screen and (min-width: 320px) {
     max-width: 479px;
@@ -40,7 +41,12 @@
    display: none;
    
         &.is-open{
-      display: block; 
+          display: block;
+          // position: fixed;
+          // width: 100%;
+          // height: 100%;
+
+      // display: block; 
       position: absolute;
       left: 0;
       top: 100%;
