@@ -180,9 +180,9 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -194,16 +194,19 @@ img {
 @media screen and (min-width: 480px) {
   .header__container {
     background-color: yellowgreen;
+    max-width: 767px;
   }
 }
 @media screen and (min-width: 768px) {
   .header__container {
     background-color: violet;
+    max-width: 1199px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__container {
     background-color: blue;
+    max-width: 1200px;
   }
 }
 
@@ -218,6 +221,9 @@ img {
   width: 100vw;
   height: 100vw;
   background-color: var(--white-color);
+}
+.mobile-menu.is-open + .logo {
+  opacity: 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -268,21 +274,34 @@ img {
 }
 
 .nav-list__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 480px) {
+  .nav-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav-list__link {
   text-decoration: none;
   color: var(--title-color);
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.175;
+  letter-spacing: 0.02;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list__link:hover, .nav-list__link:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .nav-list__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .nav-list__link--current {
@@ -340,11 +359,19 @@ img {
 
 .auth-nav__link--letter,
 .auth-nav__link--tel {
-  fill: var(--text-color);
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-right: 10px;
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .auth-nav__link--letter,
+.auth-nav__link--tel {
+    display: block;
+    fill: var(--text-color);
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 10px;
+  }
 }
 
 .auth-nav__link:hover .auth-nav__link--letter,

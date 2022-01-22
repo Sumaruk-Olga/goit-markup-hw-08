@@ -17,19 +17,22 @@
   @media screen and (min-width: 320px) {
     max-width: 479px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
         
   }
   @media screen and (min-width: 480px){
     background-color: yellowgreen;
+    max-width: 767px;
   }
   @media screen and (min-width: 768px) {
     background-color: violet;
+    max-width: 1199px;
   }
   @media screen and (min-width: 1200px){
     background-color: blue;
+    max-width: 1200px;
   }
 }
 
@@ -44,6 +47,10 @@
       width: 100vw;
       height: 100vw;
       background-color: var(--white-color);
+    }
+
+    &.is-open+.logo{
+      opacity: 0;
     }
    }
   
@@ -71,6 +78,7 @@ color:var(--accent-color);
   border: none;
   background-color: transparent;
 
+    
     &.is-open .modal-menu__button--open{
       display: none;
     }
@@ -82,9 +90,13 @@ color:var(--accent-color);
       display: none;
     }
    
+    // &:hover .modal-menu__button--open,
+    // &:focus .modal-menu__button--open,
+    // &:hover .modal-menu__button--close,
+    // &:focus .modal-menu__button--close {
+    //   fill:var(--accent-color);
+    // }
 }
-
-
 
 .modal-menu__button--close{
   display: none;
@@ -100,20 +112,33 @@ color:var(--accent-color);
   }
   
   .nav-list__item:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 32px;
+    @media screen and (min-width: 480px) {
+      margin-right: 50px;
+    }
+    
   }
   
   .nav-list__link{
     text-decoration: none;
     color: var(--title-color);
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.175;
+    letter-spacing: 0.02;
+
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
       &:hover,
       &:focus{
       color: var(--accent-color);
+      }
+
+      @media screen and (min-width: 480px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
       }
   }
 
@@ -122,8 +147,7 @@ color:var(--accent-color);
     @media screen and (min-width: 480px) {
       position: relative;
     }
-    
-    
+        
   }
 
 @media screen and (min-width: 480px) {
@@ -172,10 +196,19 @@ margin-right: 30px;
 
 .auth-nav__link--letter,
 .auth-nav__link--tel{
+   display: none;
+}
+
+.auth-nav__link--letter,
+.auth-nav__link--tel{
+  @media screen and (min-width: 480px) {
+    display: block;
     fill: var(--text-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-right: 10px;
+  }
 }
+
 
 .auth-nav__link:hover .auth-nav__link--letter,
 .auth-nav__link:focus .auth-nav__link--letter,
