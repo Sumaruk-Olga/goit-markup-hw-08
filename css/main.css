@@ -1214,7 +1214,13 @@ img {
 }
 
 .our-works {
-  padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .our-works {
+    display: block;
+    padding-bottom: 94px;
+  }
 }
 
 .our-works__title {

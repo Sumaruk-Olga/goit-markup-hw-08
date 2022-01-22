@@ -1,5 +1,9 @@
 .our-works {
-    padding-bottom: 94px;
+    display: none;
+    @media screen and (min-width: 480px) {
+      display: block;
+      padding-bottom: 94px;
+    }
   }
 
 
