@@ -42,11 +42,11 @@
         &.is-open{
       display: block; 
       position: absolute;
-      overflow-y: scroll;
       left: 0;
       top: 100%;
-      width: 100vw;
       height: 100vw;
+      width: 100vh;
+      overflow-y: scroll;
       padding-left: 40px;
       padding-top: 10px;
       padding-right: 10px;
@@ -93,7 +93,9 @@ color:var(--accent-color);
   padding: 0;
   border: none;
   background-color: transparent;
-
+  &:hover .modal-menu__button--open,
+  &:focus .modal-menu__button--open  {
+    fill:var(--accent-color);}
     
     &.is-open .modal-menu__button--open{
       display: none;
@@ -102,16 +104,20 @@ color:var(--accent-color);
       display: block;
     }
 
+    &.is-open .modal-menu__button--close{
+fill: black;
+    }
+    &.is-open:hover .modal-menu__button--close,
+    &.is-open:focus .modal-menu__button--close{
+      fill:var(--accent-color);
+    }
+
     @media screen and (min-width: 480px) {
       display: none;
     }
    
-    // &:hover .modal-menu__button--open,
-    // &:focus .modal-menu__button--open,
-    // &:hover .modal-menu__button--close,
-    // &:focus .modal-menu__button--close {
-    //   fill:var(--accent-color);
-    // }
+ 
+    
 }
 
 .modal-menu__button--close{

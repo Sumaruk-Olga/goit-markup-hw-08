@@ -216,11 +216,11 @@ img {
 .mobile-menu.is-open {
   display: block;
   position: absolute;
-  overflow-y: scroll;
   left: 0;
   top: 100%;
-  width: 100vw;
   height: 100vw;
+  width: 100vh;
+  overflow-y: scroll;
   padding-left: 40px;
   padding-top: 10px;
   padding-right: 10px;
@@ -267,11 +267,20 @@ img {
   border: none;
   background-color: transparent;
 }
+.modal-menu__button:hover .modal-menu__button--open, .modal-menu__button:focus .modal-menu__button--open {
+  fill: var(--accent-color);
+}
 .modal-menu__button.is-open .modal-menu__button--open {
   display: none;
 }
 .modal-menu__button.is-open .modal-menu__button--close {
   display: block;
+}
+.modal-menu__button.is-open .modal-menu__button--close {
+  fill: black;
+}
+.modal-menu__button.is-open:hover .modal-menu__button--close, .modal-menu__button.is-open:focus .modal-menu__button--close {
+  fill: var(--accent-color);
 }
 @media screen and (min-width: 480px) {
   .modal-menu__button {
