@@ -256,6 +256,7 @@ img {
 }
 
 .modal-menu__social-link {
+  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -291,6 +292,9 @@ img {
   display: none;
 }
 
+.nav-list {
+  margin-bottom: 100px;
+}
 @media screen and (min-width: 480px) {
   .nav-list {
     display: -webkit-box;

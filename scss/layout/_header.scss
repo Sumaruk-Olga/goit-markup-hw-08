@@ -86,7 +86,7 @@
 
 
 .modal-menu__social-link{
-  // display: block;
+  display: block;
  font-weight: 500;
 font-size: 18px;
 line-height: 1.22;
@@ -125,7 +125,7 @@ color:var(--accent-color);
 //logo is in   components/_logo.scss
 
 .nav-list {
-    
+    margin-bottom: 100px;
     @media screen and (min-width: 480px) {
       display: flex;
     }
@@ -246,7 +246,6 @@ color:var(--accent-color);
     margin-right: 10px;
   }
 }
-
 
 .auth-nav__link:hover .auth-nav__link--letter,
 .auth-nav__link:focus .auth-nav__link--letter,
