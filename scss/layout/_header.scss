@@ -1,5 +1,5 @@
 .header { 
-  position: relative;
+  // position: relative;
   display: block;  
   z-index: 9;
   width: 100%;
@@ -13,7 +13,7 @@
 }
 
 .header__container {   
-  // position: relative;
+  position: relative;
   align-items: center;  
   @media screen and (min-width: 320px) {
     max-width: 479px;
@@ -42,17 +42,12 @@
    
         &.is-open{
           display: block;
-          // position: fixed;
-          // width: 100%;
-          // height: 100%;
-
-      // display: block; 
       position: absolute;
       left: 0;
       top: 100%;
-      height: 100vw;
-      width: 100vh;
-      overflow-y: scroll;
+      height: 100vh;
+      width: 100vw;
+      // overflow-y: scroll;
       padding-left: 40px;
       padding-top: 10px;
       padding-right: 10px;
@@ -73,6 +68,7 @@
 
 .modal-menu__social-list{
    display: flex;
+   align-items:flex-end;
   @media screen and (min-width: 480px) {
     display: none;
   }
@@ -115,14 +111,10 @@ color:var(--accent-color);
       display: block;
     }
 
-    
-    
-
-    @media screen and (min-width: 480px) {
+      @media screen and (min-width: 480px) {
       display: none;
     }
    
- 
     
 }
 
@@ -133,7 +125,7 @@ color:var(--accent-color);
 //logo is in   components/_logo.scss
 
 .nav-list {
-    margin-bottom: 302px;
+    
     @media screen and (min-width: 480px) {
       display: flex;
     }
@@ -163,6 +155,7 @@ color:var(--accent-color);
       &:focus{
       color: var(--accent-color);
       }
+
 
       @media screen and (min-width: 480px) {
         padding-top: 32px;
@@ -197,16 +190,18 @@ color:var(--accent-color);
     display: flex;
     flex-direction: column-reverse;
     margin-left: auto;
-        &:not(:last-child) {        
-            margin-right: 50px;
-        }
+    margin-bottom: 64px;
+   
+        // &:not(:last-child) {        
+        //     margin-right: 50px;
+        // }
 }
 .auth-nav__item{
   display: block;
 }
-.auth-nav__item:not(:last-child){
-margin-right: 30px;
-}
+// .auth-nav__item:not(:last-child){
+// margin-right: 30px;
+// }
 
 .auth-nav__link {
     display: block;
@@ -235,7 +230,6 @@ margin-right: 30px;
   font-size: 24px;
   color: var(--text-color);
   margin-top: 32px;
-  margin-bottom: 64px;
 }
 
 .auth-nav__link--letter,
