@@ -57,6 +57,11 @@
     &.is-open+.logo{
       opacity: 0;
     }
+
+    &.is-open modal-menu__button:hover .modal-menu__button--close,
+    &.is-open modal-menu__button:focus .modal-menu__button--close{
+      fill:var(--accent-color);
+    }
    }
   
 
@@ -104,13 +109,8 @@ color:var(--accent-color);
       display: block;
     }
 
-    &.is-open .modal-menu__button--close{
-fill: black;
-    }
-    &.is-open:hover .modal-menu__button--close,
-    &.is-open:focus .modal-menu__button--close{
-      fill:var(--accent-color);
-    }
+    
+    
 
     @media screen and (min-width: 480px) {
       display: none;
