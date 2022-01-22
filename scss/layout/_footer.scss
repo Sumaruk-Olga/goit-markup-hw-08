@@ -5,14 +5,22 @@
   }
 
   .footer__container {
-    display: flex;
+    text-align: center;
+    @media screen and (min-width:480px) {
+      display: flex;
     justify-content: flex-start;
     align-items: baseline;
+    }
+    
   }
 
   .footer__contacts {
-    min-width: 231px;
-    margin-right: 70px;
+    margin-bottom: 60px;
+    @media screen and (min-width:480px){
+      min-width: 231px;
+      margin-right: 70px;
+    }
+    
   }
 
   .footer__logo {
@@ -21,10 +29,16 @@
 
   
   .footer .logo {
-    display: block;
-    padding: 0;
-    margin: 0;
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 20px;
+    @media screen and (min-width:480px){
+      display: block;
+      padding: 0;
+      margin: 0;
+     
+    }
+    
   }
 
   .footer__address {
@@ -35,13 +49,19 @@
   .footer__address--text{
     font-size: 14px;
     color: var(--white-color);
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     line-height: 1.71;
+    @media screen and (min-width:480px) {
+      margin-bottom: 9px;
+    }
   }
 
   .footer__address--list {
     font-size: 14px;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and (min-width:480px) {
+      margin-bottom: 9px;
+    }
   }
 
   .footer__address--auth {
@@ -56,9 +76,14 @@
   }
 
   .connect-us {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    @media screen and (min-width:480px){
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
   }
 
   .connect-us__text {
@@ -70,11 +95,20 @@
     vertical-align: top;
     text-transform: uppercase;
     margin-bottom: 20px;
+    @media screen and (min-width:480px){
     margin-right: 93px;
   }
+}
 
   .connect-us__list {
+   
     display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+   
+    @media screen and (min-width:480px) {
+      display: flex;     
+    }
   }
 
   .connect-us__item {
@@ -134,14 +168,22 @@
   }
 
   .subscript-us {
-    display: flex;
+    @media screen and (min-width:480px){
+      display: flex;
+    }
+     
   }
 
 
 
 
   .subscript-us__input {
-    width: 358px;
+width: 100%;
+margin-bottom: 20px;
+    @media screen and (min-width:480px){
+      width: 358px;
+     
+    }
     height: 50px;
     font-size: 16px;
     line-height: 1.25;
@@ -175,8 +217,11 @@
 
 
   .subscript-us__button {
+    vertical-align: center;
+    @media screen and (min-width:480px){
+      display: flex;
+    }
     padding: 0;
-    display: flex;
     width: 200px;
     height: 50px;
     justify-content: center;
