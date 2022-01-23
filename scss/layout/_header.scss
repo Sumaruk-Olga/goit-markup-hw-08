@@ -152,7 +152,7 @@ color:var(--accent-color);
       align-items: center;
     }
     @media screen and (min-width: 480px){
-      margin-right: 280px;
+      // margin-right: auto;
     }
   }
   
@@ -230,7 +230,7 @@ color:var(--accent-color);
    }
    @media screen and (min-width: 1200px){
      flex-direction: row;
-     margin-left: 0;
+     margin-left: 305px;
      &:not(:last-child) {        
       margin-right: 50px;
   }

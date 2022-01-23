@@ -334,12 +334,6 @@ img {
             align-items: center;
   }
 }
-@media screen and (min-width: 480px) {
-  .nav-list {
-    margin-right: 280px;
-  }
-}
-
 .nav-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -424,7 +418,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-left: 0;
+    margin-left: 305px;
   }
   .auth-nav:not(:last-child) {
     margin-right: 50px;
