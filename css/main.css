@@ -47,6 +47,16 @@ img {
   padding: 0px 15px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
@@ -193,6 +203,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .header__container {
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -319,14 +330,20 @@ img {
   display: none;
 }
 
-.nav-list {
-  margin-bottom: 100px;
+@media screen and (max-width: 479px) {
+  .nav-list {
+    margin-bottom: 300px;
+  }
 }
 @media screen and (min-width: 480px) {
   .nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -336,6 +353,7 @@ img {
 @media screen and (min-width: 480px) {
   .nav-list__item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: 0px;
     margin-bottom: 0;
   }
 }
@@ -409,10 +427,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+.auth-nav__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .auth-nav__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -430,11 +454,15 @@ img {
 }
 @media screen and (min-width: 480px) {
   .auth-nav__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
     font-size: 12px;
     line-height: 1.17;
     color: var(--text-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  .auth-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .auth-nav__link:hover, .auth-nav__link:focus {
@@ -450,6 +478,7 @@ img {
   .auth-nav__link.auth-nav__link--email {
     font-size: 12px;
     line-height: 1.17;
+    margin: 0;
   }
 }
 
@@ -481,6 +510,11 @@ img {
 .auth-nav__link:hover .auth-nav__link--tel,
 .auth-nav__link:focus .auth-nav__link--tel {
   fill: var(--accent-color);
+}
+
+.auth-nav__link--email:hover,
+.auth-nav__link--email:focus {
+  color: var(--accent-color);
 }
 
 .desctop-nav {

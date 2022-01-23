@@ -145,7 +145,7 @@ color:var(--accent-color);
 .nav-list {
   
     @media screen and (max-width: 479px) {
-      margin-bottom: 100px;
+      margin-bottom: 300px;
     }
     @media screen and (min-width: 480px) {
       display: flex;
@@ -184,14 +184,15 @@ color:var(--accent-color);
       
 
       @media screen and (min-width: 480px) {
-        
+        padding-top: 32px;
+        padding-bottom: 32px;
         font-size: 14px;
         line-height: 1.14;
       }
-      @media screen and (min-width: 768px){
-        padding-top: 32px;
-        padding-bottom: 32px;
-      }
+      // @media screen and (min-width: 768px){
+      //   padding-top: 32px;
+      //   padding-bottom: 32px;
+      // }
   }
 
   .nav-list__link--current {
@@ -232,6 +233,9 @@ color:var(--accent-color);
 .auth-nav__item{
   display: flex;
   width: 100%;
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
 }
 // .auth-nav__item:not(:last-child){
 // margin-right: 30px;
@@ -300,6 +304,11 @@ color:var(--accent-color);
 .auth-nav__link:hover .auth-nav__link--tel,
 .auth-nav__link:focus .auth-nav__link--tel {
   fill: var(--accent-color);
+}
+
+.auth-nav__link--email:hover,
+.auth-nav__link--email:focus{
+  color: var(--accent-color);
 }
 
 .desctop-nav{
