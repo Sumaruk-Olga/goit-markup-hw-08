@@ -193,7 +193,16 @@ img {
 }
 @media screen and (min-width: 480px) {
   .header__container {
-    background-color: yellowgreen;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 767px;
   }
 }
@@ -327,6 +336,7 @@ img {
 @media screen and (min-width: 480px) {
   .nav-list__item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
 }
 
@@ -349,6 +359,8 @@ img {
   .nav-list__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -383,9 +395,20 @@ img {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
 }
+@media screen and (min-width: 480px) {
+  .auth-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 84px;
+  }
+}
 
 .auth-nav__item {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .auth-nav__link {
@@ -409,6 +432,9 @@ img {
   .auth-nav__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 12px;
+    line-height: 1.17;
+    color: var(--text-color);
   }
 }
 .auth-nav__link:hover, .auth-nav__link:focus {
@@ -420,10 +446,22 @@ img {
   color: var(--text-color);
   margin-top: 32px;
 }
+@media screen and (min-width: 480px) {
+  .auth-nav__link.auth-nav__link--email {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
 
 .auth-nav__link--letter,
 .auth-nav__link--tel {
   display: none;
+}
+@media screen and (min-width: 480px) {
+  .auth-nav__link--letter,
+.auth-nav__link--tel {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -443,6 +481,23 @@ img {
 .auth-nav__link:hover .auth-nav__link--tel,
 .auth-nav__link:focus .auth-nav__link--tel {
   fill: var(--accent-color);
+}
+
+.desctop-nav {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .desctop-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .footer {
