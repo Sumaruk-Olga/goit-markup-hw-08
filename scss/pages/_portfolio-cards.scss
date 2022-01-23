@@ -3,7 +3,9 @@
     display: flex;
     flex-wrap: wrap;
   }
-    
+  @media screen and (min-width: 768px){
+    margin: 0 -15px;
+  }
   }
   
 .all-works__list-item{
@@ -12,19 +14,27 @@
     border-bottom: 1px solid var(--border-portfolio-card);
     background: var(--page-color);         
           
-  }
+  
 
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 1200px){
             
     .all-works__list-item{
       width: 370px;
       &:not(:nth-child(3n)) {
         margin-right: 30px;
       }
+    }
 
     &:not(:nth-last-child(-n + 3)) {
         margin-bottom: 30px;
       }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: 15px;
+      margin-right: 15px;
+      flex-basis: calc((100%-4*15px)/2);
+      max-width: 354px;
     }
   }
 
