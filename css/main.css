@@ -1323,7 +1323,7 @@ body.modal--open {
 .benefits {
   padding: 60px 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .benefits {
     padding: 94px 0px;
   }
@@ -1526,8 +1526,8 @@ body.modal--open {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 -15px;
-    width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 }
 
@@ -1547,7 +1547,7 @@ body.modal--open {
     max-width: 354px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1200px) {
   .team-list__item:not(:last-child) {
     margin-right: 30px;
   }
