@@ -29,8 +29,7 @@
    justify-content: space-between;
     max-width: 767px;
   }
-  @media screen and (min-width: 768px) {
-    background-color: violet;
+  @media screen and (min-width: 768px) {    
     max-width: 1199px;
   }
   @media screen and (min-width: 1200px){
@@ -259,7 +258,7 @@ color:var(--accent-color);
       line-height: 1.17;
       color: var(--text-color);
     }
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 1200px){
       padding-top: 32px;
       padding-bottom: 32px;
     }
