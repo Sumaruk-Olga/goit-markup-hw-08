@@ -379,13 +379,19 @@
               </div>
             </li>
             <li class="list team-list__item">
-              <img
+              <picture>
+                <source media='(min-width:1200px)' srcset="./images/jermakov-desctop.jpg 1x, ./images/jermakov-desctop@2x.jpg 2x">
+                <source media='(min-width:768px)' srcset="./images/jermakov-tablet.jpg 1x, ./images/jermakov-tablet@2x.jpg 2x">
+                <source media='(min-width:320px)' srcset="./images/jermakov-mobile.jpg 1x, ./images/jermakov-mobile@2x.jpg 2x">
+                <img
                 class="team__foto"
                 src="./images/img-8.jpg"
                 alt="Михаил Ермаков"
                 width="270"
                 height="260"
               />
+              </picture>
+              
               <div class="team__container">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__position" lang="en">UI Designer</p>
