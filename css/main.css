@@ -301,6 +301,9 @@ img {
 .modal-menu__button:hover .modal-menu__button--open, .modal-menu__button:focus .modal-menu__button--open {
   fill: var(--accent-color);
 }
+.modal-menu__button:hover .modal-menu__button--close, .modal-menu__button:focus .modal-menu__button--close {
+  fill: var(--accent-color);
+}
 .modal-menu__button.is-open .modal-menu__button--open {
   display: none;
 }
@@ -333,6 +336,7 @@ img {
             align-items: center;
   }
 }
+
 .nav-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
