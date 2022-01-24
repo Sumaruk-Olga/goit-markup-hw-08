@@ -281,13 +281,19 @@
               </div>
             </li>
             <li class="list team-list__item">
-              <img
+              <picture>
+                <source media='(min-width:1200px)' srcset="./images/repina-desctop.jpg 1x, ./images/repina-desctop@2x.jpg 2x">
+                <source media='(min-width:768px)' srcset="./images/repina-tablet.jpg 1x, ./images/repina-tablet@2x.jpg 2x">
+                <source media='(min-width:320px)' srcset="./images/repina-mobile.jpg 1x, ./images/repina-mobile@2x.jpg 2x">
+                <img
                 class="team__foto"
                 src="./images/img-6.jpg"
                 alt="Ольга Репина"
                 width="270"
                 height="260"
               />
+              </picture>
+              
               <div class="team__container">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__position" lang="en">Frontend Developer</p>
