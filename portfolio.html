@@ -385,13 +385,19 @@
             <li class="list all-works__list-item card">
               <a class="card__link" href="#">
                 <div class="card__thumb">
-                  <img
+                  <picture>
+                    <source media='(min-width:1200px)' srcset="./images/growing-desctop.jpg 1x, ./images/growing-desctop@2x.jpg 2x">
+                    <source media='(min-width:768px)' srcset="./images/growing-tablet.jpg 1x, ./images/growing-tablet@2x.jpg 2x">
+                    <source media='(min-width:320px)' srcset="./images/growing-mobile.jpg 1x, ./images/growing-mobile@2x.jpg 2x">
+                    <img
                     class="card__foto"
                     src="./images/img-portfolio-9.jpg"
                     alt="Руки печатают на клавиатуре ноутбука"
                     width="370"
                     height="294"
                   />
+                  </picture>
+                  
                   <div class="card__text-description--shown">
                     <p class="card__text-description">
                       Технокряк это современная площадка распространения коронавируса. Компании
