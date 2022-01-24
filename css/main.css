@@ -298,9 +298,6 @@ img {
   border: none;
   background-color: transparent;
 }
-.modal-menu__button:hover .modal-menu__button--open, .modal-menu__button:focus .modal-menu__button--open {
-  fill: var(--accent-color);
-}
 .modal-menu__button:hover .modal-menu__button--close, .modal-menu__button:focus .modal-menu__button--close {
   fill: var(--accent-color);
 }
@@ -309,6 +306,9 @@ img {
 }
 .modal-menu__button.is-open .modal-menu__button--close {
   display: block;
+}
+.modal-menu__button.is-open:hover .modal-menu__button--open, .modal-menu__button.is-open:focus .modal-menu__button--open {
+  fill: var(--accent-color);
 }
 @media screen and (min-width: 768px) {
   .modal-menu__button {
@@ -799,7 +799,6 @@ img {
 }
 
 .subscript-us__input {
-  width: 100%;
   margin-bottom: 20px;
   height: 50px;
   font-size: 16px;
