@@ -36,6 +36,10 @@
       flex-basis: calc((100%-4*15px)/2);
       max-width: 354px;
     }
+
+    @media screen and (min-width:320px) {
+      margin-bottom: 30px;
+    }
   }
 
  .card {
@@ -110,4 +114,8 @@
     letter-spacing: 0.03em;
   }
   
-  
+  .card__foto{
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+  }
