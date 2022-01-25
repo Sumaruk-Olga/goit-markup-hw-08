@@ -49,9 +49,19 @@ img {
   padding: 0px 15px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -578,6 +588,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    text-align: left;
   }
 }
 
@@ -589,6 +600,12 @@ img {
     min-width: 231px;
     margin-right: 70px;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    text-align: left;
+    margin-bottom: 0;
   }
 }
 
@@ -609,6 +626,11 @@ img {
     margin-bottom: 20px;
     text-align: center;
     margin-left: 39px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer .logo {
+    margin-left: 0;
   }
 }
 
@@ -667,6 +689,11 @@ img {
             flex-direction: column;
   }
 }
+@media screen and (min-width: 1200px) {
+  .connect-us {
+    text-align: left;
+  }
+}
 
 .connect-us__text {
   font-weight: 700;
@@ -683,6 +710,11 @@ img {
     margin-right: 93px;
     text-align: center;
     margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect-us__text {
+    text-align: left;
   }
 }
 
@@ -922,6 +954,15 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tablet-container {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin: 0;
+    margin-right: 93px;
   }
 }
 
@@ -1333,10 +1374,10 @@ body.modal--open {
 }
 @media screen and (min-width: 320px) {
   .section-hero {
-    max-width: 479px;
-    height: 400px;
-    padding-top: 118px;
-    padding-bottom: 118px;
+    max-width: 480px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-mobile.jpg");
     background-image: -o-linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
@@ -1366,6 +1407,7 @@ body.modal--open {
 }
 @media screen and (min-width: 1200px) {
   .section-hero {
+    max-width: 1600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-desctop.jpg");
     background-image: -o-linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-desctop.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-desctop.jpg");
@@ -1529,6 +1571,11 @@ body.modal--open {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .benefits-list__title {
+    text-align: left;
+  }
 }
 
 .benefits-list__description {
@@ -1872,6 +1919,7 @@ body.modal--open {
 .button:focus, .button:hover {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--accent-color);
 }
 
 .filter__current-button {

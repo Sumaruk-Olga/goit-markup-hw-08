@@ -77,6 +77,9 @@ margin-bottom: 30px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  @media screen and (min-width:1200px) {
+    text-align: left;
+  }
   }
 
   .benefits-list__description {
