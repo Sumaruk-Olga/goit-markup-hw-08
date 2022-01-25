@@ -791,6 +791,17 @@ img {
 .subscription {
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .subscription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription {
+    margin: 0;
+  }
+}
 
 .subscription__title {
   color: var(--white-color);
@@ -1888,6 +1899,11 @@ body.modal--open {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
     margin-bottom: 50px;
   }
 }
@@ -1936,6 +1952,10 @@ body.modal--open {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0 -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .all-works {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

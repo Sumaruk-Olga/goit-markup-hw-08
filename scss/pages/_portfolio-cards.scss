@@ -3,9 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    
+  }
+  @media screen and (min-width:1200px){
     justify-content: center;
   }
-  
   }
   
 .all-works__list-item{
