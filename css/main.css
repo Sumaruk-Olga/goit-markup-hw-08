@@ -233,7 +233,16 @@ img {
   display: none;
 }
 .mobile-menu.is-open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -275,7 +284,6 @@ img {
           align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 64px;
 }
 @media screen and (min-width: 768px) {
   .modal-menu__social-list {
@@ -319,6 +327,11 @@ img {
 .modal-menu__button.is-open .modal-menu__button--close {
   display: block;
 }
+.modal-menu__button.is-open {
+  position: fixed;
+  margin-top: 10px;
+  margin-right: 15px;
+}
 .modal-menu__button.is-open:hover .modal-menu__button--open, .modal-menu__button.is-open:focus .modal-menu__button--open {
   fill: var(--accent-color);
 }
@@ -332,11 +345,6 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
-  .nav-list {
-    margin-bottom: 300px;
-  }
-}
 @media screen and (min-width: 768px) {
   .nav-list {
     display: -webkit-box;
@@ -452,6 +460,12 @@ img {
 @media screen and (min-width: 1200px) {
   .auth-nav__item:not(:last-child) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-menu__container .auth-nav {
+    margin-top: auto;
   }
 }
 
@@ -1374,7 +1388,14 @@ body.modal--open {
 
 .section-hero {
   margin: 0 auto;
+  max-width: 480px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--background-color);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-mobile.jpg");
+  background-image: -o-linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
   max-width: 1600px;
   height: 600px;
   padding-top: 200px;
@@ -1383,18 +1404,7 @@ body.modal--open {
   background-size: cover;
   background-position: center;
 }
-@media screen and (min-width: 320px) {
-  .section-hero {
-    max-width: 480px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-mobile.jpg");
-    background-image: -o-linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
-  }
-}
-@media screen and (min-width: 320px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 320px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 320px) and (min-resolution: 192dpi), screen and (min-width: 320px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-mobile@2x.jpg");
     background-image: -o-linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile@2x.jpg");
@@ -1432,18 +1442,23 @@ body.modal--open {
   }
 }
 
-@media screen and (min-width: 320px) {
+.section-hero__picture {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
   .section-hero__picture {
-    color: var(--white-color);
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.615;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1784,7 +1799,7 @@ body.modal--open {
   letter-spacing: 0.03em;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .clients__title {
     font-size: 36px;
     margin-bottom: 50px;

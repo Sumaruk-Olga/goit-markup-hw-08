@@ -42,11 +42,14 @@
    display: none;
     
         &.is-open{
-          display: block;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           position: fixed;
           top: 0;
           left: 0;
           z-index: 3;
+
 
       //     position: absolute;
            
@@ -82,7 +85,7 @@
    display: flex;
    align-items:flex-end;
    flex-wrap: wrap;
-   margin-top: 64px;
+  
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -125,8 +128,15 @@ color:var(--accent-color);
       display: none;
     }
     &.is-open .modal-menu__button--close{
-      display: block;
+      display: block;     
     }
+
+    &.is-open {
+      position: fixed;
+      margin-top: 10px;
+  margin-right: 15px;
+    }
+
     &.is-open:hover .modal-menu__button--open,
     &.is-open:focus .modal-menu__button--open  {
       fill:var(--accent-color);
@@ -147,7 +157,7 @@ color:var(--accent-color);
 .nav-list {
   
     @media screen and (max-width: 767px) {
-      margin-bottom: 300px;
+      // margin-bottom: auto;
     }
     @media screen and (min-width: 768px) {
       display: flex;
@@ -221,6 +231,7 @@ color:var(--accent-color);
 .auth-nav{
     display: flex;
     flex-direction: column-reverse;
+    
    @media screen and (min-width: 768px) {
      flex-direction: column;
      align-items: baseline;
@@ -246,7 +257,11 @@ color:var(--accent-color);
   }
 }
 
-
+.mobile-menu__container .auth-nav{
+  @media screen and (max-width:767px) {
+    margin-top: auto;
+  }
+}
 .auth-nav__link {
     display: flex;
     align-items: center;
